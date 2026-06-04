@@ -1,7 +1,8 @@
 "use client";
 
 import { useState, useEffect } from "react";
-import { Menu, X, Phone } from "lucide-react";
+import Image from "next/image";
+import { Menu, X } from "lucide-react";
 import { Button } from "@/components/ui/button";
 
 const navLinks = [
@@ -35,17 +36,26 @@ export function Header() {
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <div className="flex h-20 items-center justify-between">
           {/* Logo */}
-          <a href="#" className="flex items-center gap-3">
-            <div className="flex h-10 w-10 items-center justify-center rounded-lg bg-primary">
-              <span className="text-xl font-bold text-primary-foreground">
-                PA
-              </span>
-            </div>
-            <div className="hidden sm:block">
-              <span className="text-lg font-semibold tracking-tight text-foreground">
-                Palmas Abiertas
-              </span>
-            </div>
+          <a href="#" className="flex items-center">
+            {isScrolled ? (
+              <Image
+                src="/Logo palmas.png"
+                alt="Palmas Abiertas"
+                width={240}
+                height={60}
+                className="h-[60px] w-auto"
+                priority
+              />
+            ) : (
+              <Image
+                src="/Logo palmas amarillo.png"
+                alt="Palmas Abiertas"
+                width={240}
+                height={60}
+                className="h-[60px] w-auto"
+                priority
+              />
+            )}
           </a>
 
           {/* Desktop Navigation */}
@@ -54,7 +64,11 @@ export function Header() {
               <a
                 key={link.href}
                 href={link.href}
-                className="text-sm font-medium text-muted-foreground transition-colors hover:text-foreground"
+                className={`text-sm font-medium transition-colors ${
+                  isScrolled
+                    ? "text-muted-foreground hover:text-foreground"
+                    : "text-white hover:text-white/80"
+                }`}
               >
                 {link.label}
               </a>
@@ -63,15 +77,8 @@ export function Header() {
 
           {/* CTA Button */}
           <div className="hidden items-center gap-4 lg:flex">
-            <a
-              href="tel:+5491112345678"
-              className="flex items-center gap-2 text-sm font-medium text-muted-foreground transition-colors hover:text-foreground"
-            >
-              <Phone className="h-4 w-4" />
-              +54 9 11 1234-5678
-            </a>
-            <Button asChild>
-              <a href="#contacto">Solicitar Cotización</a>
+            <Button onClick={() => document.getElementById('contacto')?.scrollIntoView({ behavior: 'smooth' })}>
+              Solicitar Cotización
             </Button>
           </div>
 
@@ -82,9 +89,9 @@ export function Header() {
             aria-label={isMobileMenuOpen ? "Cerrar menú" : "Abrir menú"}
           >
             {isMobileMenuOpen ? (
-              <X className="h-6 w-6 text-foreground" />
+              <X className={`h-6 w-6 ${isScrolled ? "text-foreground" : "text-white"}`} />
             ) : (
-              <Menu className="h-6 w-6 text-foreground" />
+              <Menu className={`h-6 w-6 ${isScrolled ? "text-foreground" : "text-white"}`} />
             )}
           </button>
         </div>
@@ -105,18 +112,8 @@ export function Header() {
                   {link.label}
                 </a>
               ))}
-              <hr className="border-border" />
-              <a
-                href="tel:+5491112345678"
-                className="flex items-center gap-2 text-base font-medium text-muted-foreground"
-              >
-                <Phone className="h-4 w-4" />
-                +54 9 11 1234-5678
-              </a>
-              <Button asChild className="w-full">
-                <a href="#contacto" onClick={() => setIsMobileMenuOpen(false)}>
-                  Solicitar Cotización
-                </a>
+              <Button  className="w-full" onClick={() => { document.getElementById('contacto')?.scrollIntoView({ behavior: 'smooth' }); setIsMobileMenuOpen(false); }}>
+                Solicitar Cotización
               </Button>
             </nav>
           </div>

@@ -3,26 +3,20 @@
 import { useState } from "react";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
-import { Phone, Mail, MapPin, Clock, Send, CheckCircle } from "lucide-react";
+import { Phone, Mail, Clock, Send, CheckCircle } from "lucide-react";
 
 const contactInfo = [
   {
     icon: Phone,
     label: "Teléfono",
-    value: "+54 9 11 1234-5678",
-    href: "tel:+5491112345678",
+    value: "54 9 11 5311 0944",
+    href: "https://wa.me/5491112345678",
   },
   {
     icon: Mail,
     label: "Email",
-    value: "empresas@palmasabiertas.com.ar",
-    href: "mailto:empresas@palmasabiertas.com.ar",
-  },
-  {
-    icon: MapPin,
-    label: "Oficina Central",
-    value: "Av. del Libertador 6350, CABA",
-    href: "https://maps.google.com",
+    value: "contacto@palmasabiertas.com.ar",
+    href: "mailto:Contacto@palmasabiertas.com.ar",
   },
   {
     icon: Clock,
@@ -46,7 +40,7 @@ export function Contact() {
   };
 
   return (
-    <section id="contacto" className="bg-secondary py-24 lg:py-32">
+    <section id="contacto" className="bg-secondary py-[75px]">
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <div className="grid gap-12 lg:grid-cols-2 lg:gap-16">
           {/* Left Column - Info */}
@@ -55,16 +49,15 @@ export function Contact() {
               Contacto
             </p>
             <h2 className="mb-4 text-balance text-3xl font-bold tracking-tight text-secondary-foreground sm:text-4xl">
-              Solicite su Cotización Personalizada
+              Solicite su cotización
             </h2>
             <p className="mb-8 text-pretty text-lg text-muted-foreground">
-              Complete el formulario y un ejecutivo comercial se comunicará en
-              menos de 2 horas hábiles para entender sus necesidades y
+              Complete el formulario y un ejecutivo comercial se comunicará para entender sus necesidades y
               ofrecerle la mejor solución.
             </p>
 
             {/* Contact Info Cards */}
-            <div className="grid gap-4 sm:grid-cols-2">
+            <div className="flex flex-col gap-4">
               {contactInfo.map((item) => (
                 <div
                   key={item.label}
@@ -139,7 +132,7 @@ export function Contact() {
                         type="text"
                         id="empresa"
                         name="empresa"
-                        required
+                        
                         className="w-full rounded-lg border border-input bg-background px-4 py-3 text-foreground placeholder:text-muted-foreground focus:border-primary focus:outline-none focus:ring-1 focus:ring-primary"
                         placeholder="Nombre de su empresa"
                       />
@@ -152,7 +145,7 @@ export function Contact() {
                         htmlFor="email"
                         className="mb-2 block text-sm font-medium text-card-foreground"
                       >
-                        Email corporativo *
+                        Email *
                       </label>
                       <input
                         type="email"
@@ -196,10 +189,9 @@ export function Contact() {
                     >
                       <option value="">Seleccione una opción</option>
                       <option value="transfer">Transfer Aeropuerto</option>
-                      <option value="corporativo">Transporte Corporativo Regular</option>
+                      <option value="corporativo">Transporte Regular</option>
                       <option value="eventos">Eventos Empresariales</option>
-                      <option value="abono">Abono Mensual Ejecutivo</option>
-                      <option value="disposicion">Disposición por Hora</option>
+                      <option value="abono">Abono Mensual </option>
                       <option value="otro">Otro</option>
                     </select>
                   </div>

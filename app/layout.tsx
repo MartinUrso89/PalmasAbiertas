@@ -1,6 +1,7 @@
 import { Analytics } from '@vercel/analytics/next'
 import type { Metadata, Viewport } from 'next'
 import { Montserrat } from 'next/font/google'
+import { WhatsAppButton } from '@/components/whatsapp-button'
 import './globals.css'
 
 const montserrat = Montserrat({
@@ -23,21 +24,8 @@ export const metadata: Metadata = {
   ],
   generator: 'v0.app',
   icons: {
-    icon: [
-      {
-        url: '/icon-light-32x32.png',
-        media: '(prefers-color-scheme: light)',
-      },
-      {
-        url: '/icon-dark-32x32.png',
-        media: '(prefers-color-scheme: dark)',
-      },
-      {
-        url: '/icon.svg',
-        type: 'image/svg+xml',
-      },
-    ],
-    apple: '/apple-icon.png',
+    icon: '/favicon.png',
+    apple: '/Iso.PNG',
   },
   openGraph: {
     title: 'Palmas Abiertas | Transporte Corporativo Premium',
@@ -63,6 +51,7 @@ export default function RootLayout({
     <html lang="es" className={`${montserrat.variable} bg-background`}>
       <body className="font-sans antialiased">
         {children}
+        <WhatsAppButton />
         {process.env.NODE_ENV === 'production' && <Analytics />}
       </body>
     </html>

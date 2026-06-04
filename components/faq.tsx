@@ -9,12 +9,12 @@ const faqs = [
   {
     question: "¿Cuáles son sus zonas de cobertura?",
     answer:
-      "Cubrimos toda el área metropolitana de Buenos Aires (AMBA), incluyendo Capital Federal y Gran Buenos Aires. También realizamos traslados interurbanos a cualquier punto del país, como Rosario, Córdoba, Mar del Plata, entre otros.",
+      "Cubrimos toda el área metropolitana de Buenos Aires (AMBA), incluyendo Capital Federal y Gran Buenos Aires. También realizamos traslados interurbanos a cualquier punto de la provincia de Buenos Aires",
   },
   {
     question: "¿Qué tipos de vehículos tienen disponibles?",
     answer:
-      "Nuestra flota está compuesta principalmente por Mercedes-Benz Clase E y Clase V. Para grupos más grandes, contamos con Sprinter y minibuses ejecutivos. Todos los vehículos son modelos recientes, con menos de 3 años de antigüedad.",
+      "Nuestra flota está compuesta principalmente por ...",
   },
   {
     question: "¿Cómo funciona la facturación para empresas?",
@@ -24,19 +24,14 @@ const faqs = [
   {
     question: "¿Qué pasa si necesito cancelar o modificar un viaje?",
     answer:
-      "Puede cancelar o modificar sin cargo hasta 4 horas antes del horario programado. Para cancelaciones con menor anticipación, se aplica un cargo del 50%. Nuestra central de operaciones está disponible 24/7 para gestionar cambios.",
+      "Puede cancelar o modificar sin cargo hasta 4 horas ...",
   },
   {
     question: "¿Los choferes están capacitados en protocolo corporativo?",
     answer:
       "Sí, todos nuestros choferes pasan por un riguroso proceso de selección y capacitación. Incluye verificación de antecedentes, curso de manejo defensivo, protocolo corporativo, primeros auxilios y actualización constante. Mantienen estricta confidencialidad.",
   },
-  {
-    question: "¿Ofrecen servicio para eventos corporativos?",
-    answer:
-      "Sí, tenemos amplia experiencia en logística de transporte para eventos. Asignamos un coordinador dedicado que gestiona todos los traslados, desde el planning hasta la ejecución. Hemos trabajado con congresos de hasta 500 participantes.",
-  },
-  {
+   {
     question: "¿Cuál es el tiempo de respuesta para cotizaciones?",
     answer:
       "Para solicitudes estándar, respondemos en menos de 2 horas hábiles. Para eventos o requerimientos especiales, entregamos una propuesta detallada en máximo 24 horas. Puede solicitar cotización por WhatsApp para mayor agilidad.",
@@ -50,7 +45,7 @@ const faqs = [
 
 export function FAQ() {
   return (
-    <section id="faq" className="bg-background py-24 lg:py-32">
+    <section id="faq" className="bg-background py-[75px]">
       <div className="mx-auto max-w-3xl px-4 sm:px-6 lg:px-8">
         {/* Section Header */}
         <div className="mb-12 text-center">
@@ -67,7 +62,7 @@ export function FAQ() {
         </div>
 
         {/* FAQ Accordion */}
-        <Accordion type="single" collapsible className="w-full">
+        <Accordion type="single" collapsible="true" className="w-full">
           {faqs.map((faq, index) => (
             <AccordionItem key={index} value={`item-${index}`}>
               <AccordionTrigger className="text-left text-base font-medium text-foreground hover:text-primary">

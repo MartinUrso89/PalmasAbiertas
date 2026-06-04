@@ -11,58 +11,35 @@ import {
 
 const benefits = [
   {
+    icon: CreditCard,
+    title: "Planes Flexibles",
+    description:
+      "Modalidades de contratación adaptadas: por viaje, abonos mensuales o contratos anuales.",
+  },
+  {
     icon: Shield,
-    title: "Seguridad Garantizada",
+    title: "Seguridad",
     description:
       "Choferes verificados con antecedentes, vehículos monitoreados por GPS y seguros de responsabilidad civil completos.",
   },
   {
     icon: Clock,
-    title: "Puntualidad Absoluta",
+    title: "Puntualidad ",
     description:
-      "Sistema de gestión que garantiza llegadas a tiempo. Nuestro récord de 99.8% de puntualidad nos respalda.",
+      "Sistema de gestión que garantiza llegadas a tiempo.",
   },
-  {
-    icon: FileCheck,
-    title: "Facturación Simplificada",
-    description:
-      "Reportes detallados, facturación consolidada y sistema de cuenta corriente para facilitar su gestión administrativa.",
-  },
-  {
-    icon: Headphones,
-    title: "Atención 24/7",
-    description:
-      "Central de operaciones disponible las 24 horas para coordinación, cambios de último momento y emergencias.",
-  },
-  {
-    icon: Car,
-    title: "Flota Premium",
-    description:
-      "Vehículos Mercedes-Benz de última generación, impecables, con aire acondicionado, WiFi y amenities ejecutivos.",
-  },
-  {
-    icon: CreditCard,
-    title: "Planes Flexibles",
-    description:
-      "Modalidades de contratación adaptadas a su volumen: por viaje, abonos mensuales o contratos anuales.",
-  },
+     
   {
     icon: Users,
-    title: "Choferes Profesionales",
+    title: "Profesionalidad",
     description:
       "Personal capacitado en protocolo corporativo, discreción absoluta y conocimiento experto de la ciudad.",
-  },
-  {
-    icon: MapPin,
-    title: "Cobertura Total",
-    description:
-      "Servicio en toda el área metropolitana de Buenos Aires y traslados a cualquier punto del país.",
-  },
+  }
 ];
 
 export function Benefits() {
   return (
-    <section id="beneficios" className="bg-secondary py-24 lg:py-32">
+    <section id="beneficios" className="bg-secondary py-[75px]">
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         {/* Section Header */}
         <div className="mx-auto mb-16 max-w-2xl text-center">
@@ -74,7 +51,7 @@ export function Benefits() {
           </h2>
           <p className="text-pretty text-lg text-muted-foreground">
             Cada detalle está pensado para brindar una experiencia de transporte
-            corporativo superior, con estándares que superan las expectativas.
+            superior, con estándares que superan las expectativas.
           </p>
         </div>
 

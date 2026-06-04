@@ -17,7 +17,7 @@ const steps = [
     number: "03",
     title: "Confirme el Servicio",
     description:
-      "Apruebe la propuesta y reciba acceso a nuestro portal de reservas o coordine directamente con su ejecutivo de cuenta.",
+      "Apruebe la propuesta y coordine directamente con el ejecutivo de cuenta.",
   },
   {
     number: "04",
@@ -29,7 +29,6 @@ const steps = [
 
 const guarantees = [
   "Sin costos ocultos ni sorpresas",
-  "Cancelación flexible hasta 4 horas antes",
   "Ejecutivo de cuenta dedicado",
   "Reportes mensuales detallados",
   "Facturación a 30 días",
@@ -37,7 +36,7 @@ const guarantees = [
 
 export function Process() {
   return (
-    <section id="proceso" className="bg-background py-24 lg:py-32">
+    <section id="proceso" className="bg-background py-[75px]">
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <div className="grid items-center gap-16 lg:grid-cols-2">
           {/* Left Column - Steps */}
@@ -46,11 +45,12 @@ export function Process() {
               Cómo Funciona
             </p>
             <h2 className="mb-6 text-balance text-3xl font-bold tracking-tight text-foreground sm:text-4xl">
-              Contratar es Simple y Rápido
+              Contratar es simple y rápido
             </h2>
             <p className="mb-10 text-pretty text-lg text-muted-foreground">
-              Diseñamos un proceso ágil para que pueda comenzar a disfrutar de
-              nuestros servicios sin complicaciones administrativas.
+             Un proceso claro y sencillo para que accedas 
+             a nuestros servicios sin demoras.
+              
             </p>
 
             <div className="space-y-8">
@@ -82,7 +82,7 @@ export function Process() {
             </h3>
             <p className="mb-8 text-background/80">
               Trabajamos con los más altos estándares de calidad para brindarle
-              una experiencia de transporte corporativo sin igual.
+              la mejor experiencia.
             </p>
             <ul className="space-y-4">
               {guarantees.map((guarantee) => (
@@ -96,8 +96,8 @@ export function Process() {
             </ul>
             <div className="mt-8 border-t border-background/20 pt-8">
               <p className="text-sm text-background/60">
-                Más de 150 empresas confían en nosotros para sus traslados
-                corporativos.
+                15 años de experiencia acompañando a empresas, instituciones y personas
+                nos avalan.
               </p>
             </div>
           </div>

@@ -30,7 +30,7 @@ const testimonials = [
 
 export function Testimonials() {
   return (
-    <section id="testimonios" className="bg-secondary py-24 lg:py-32">
+    <section id="testimonios" className="bg-secondary py-[75px]">
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         {/* Section Header */}
         <div className="mx-auto mb-16 max-w-2xl text-center">
@@ -41,7 +41,7 @@ export function Testimonials() {
             Lo Que Dicen Nuestros Clientes
           </h2>
           <p className="text-pretty text-lg text-muted-foreground">
-            La satisfacción de nuestros clientes corporativos es nuestra mejor
+            La satisfacción de nuestros clientes es nuestra mejor
             carta de presentación.
           </p>
         </div>
